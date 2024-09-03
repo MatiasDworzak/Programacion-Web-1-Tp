@@ -1,0 +1,28 @@
+﻿/* URL Paleta de colores LIGHT: https://www.coloreasily.com/?colors=0e0a06-fdeeb5-775531-586e30-4c361f */
+/* URL Paleta de colores DARK: https://www.coloreasily.com/?colors=e0e0e0-4c351f-e5cd6c-364e0d-6b4f1e */
+@import url('https://fonts.googleapis.com/css2?family=Maitree');
+@import url('https://fonts.googleapis.com/css2?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Anaheim');
+
+:root {
+   --light-color-texto:  #0e0a06  ;
+   --light-color-fondo:  #fdeeb5 ;
+   --light-color-acento-1:  #775531 ;
+   --light-color-acento-2:  #586e30 ;
+   --light-color-acento-3:  #4c361f ;
+   --dark-color-texto:  #e0e0e0 ;
+   --dark-color-fondo:  #4c351f ;
+   --dark-color-acento-1:  #e5cd6c ;
+   --dark-color-acento-2:  #364e0d ;
+   --dark-color-acento-3:  #6b4f1e ;
+}
+
+ .light-theme {
+   color:  #0e0a06  ;
+   background-color:  #fdeeb5 ;
+}
+
+.dark-theme {
+   color:  #e0e0e0 ;
+   background-color:  #4c351f ;
+}
