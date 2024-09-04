@@ -4,6 +4,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito');
 @import url('https://fonts.googleapis.com/css2?family=Anaheim');
 
+@font-face {
+   font-family: 'Maitree';
+   src: url('https://fonts.googleapis.com/css2?family=Maitree') ;
+   }
+
+   
+@font-face {
+   font-family: 'Nunito';
+   src: url('https://fonts.googleapis.com/css2?family=Nunito') ;
+   }
+
+@font-face {
+   font-family: 'Anaheim';
+   src: url('https://fonts.googleapis.com/css2?family=Anaheim') ;
+   }
+
 :root {
    --light-color-texto:  #0e0a06  ;
    --light-color-fondo:  #fdeeb5 ;
@@ -26,3 +42,4 @@
    color:  #e0e0e0 ;
    background-color:  #4c351f ;
 }
+

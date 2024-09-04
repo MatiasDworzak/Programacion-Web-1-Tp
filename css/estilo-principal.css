@@ -1,28 +1,41 @@
 ﻿@import url("_core/css/temas_colores_fuentes.css");
 
 #encabezado-principal {
-   background-color: red;
-   color: white;
+   background-color: var(--light-color-fondo);
+   color: var(--light-color-texto);
+   font-family: 'Maitree';
 }
 
 #navegacion-categoria {
-   background-color: lime;
+   background-color: var(--light-color-acento-3);
+   font-family: 'Nunito';
 }
 
 #seccion-categoria {
    min-height: 720px;
-   background-color: orange;
+   background-color: var(--light-color-acento-3);
+   font-family: 'Anaheim';
+   
 }
 
 .articulo-categoria {
    border: solid 3px gray;
+   background-color: var(--light-color-acento-1);
+    color: var(--light-color-fondo);
 }
+
+.articulo-categoria h4 {
+   font-family: 'Nunito';
+}
+
 #footer-principal {
-   background-color: blue;
+   background-color: var(--light-color-texto);
    color: white;
+   font-family: 'Maitree';
 }
 
 #qr-code {
    width:100px;
    height:100px;
 }
+
