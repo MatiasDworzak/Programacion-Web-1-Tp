@@ -1,4 +1,4 @@
-﻿@import url("../_core/css/temas_colores_fuentes.css");
+@import url("../_core/css/temas_colores_fuentes.css");
 
 *{
     margin: 0;
@@ -104,3 +104,4 @@ body a{
 .formulario-container-input-2 input:active{
     background: var(--light-color-acento-1);
 }
+
