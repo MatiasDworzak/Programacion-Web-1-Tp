@@ -1,4 +1,4 @@
-﻿@import url("../_core/css/temas_colores_fuentes.css");
+@import url("../_core/css/temas_colores_fuentes.css");
 .formulario{
    border: solid black 3px ;
    width: 380px;
@@ -44,3 +44,4 @@
 .boton-registrarse:hover{
 background-color: var(--light-color-acento-3);
 }
+
