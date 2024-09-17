@@ -1,1 +1,47 @@
-﻿
+@import url("../_core/css/temas_colores_fuentes.css");
+.formulario{
+   border: solid black 3px ;
+   width: 380px;
+   margin: 20px;
+}
+
+.header{
+   font-family: "Nunito";
+   font-size: large;
+   text-align: center;
+}
+
+.caja{
+   padding: 0px;
+   text-align: center;
+   margin: 10px;
+   font-family: 'Anaheim';
+
+}
+
+.input-Text{
+   
+   padding: 10px;
+   width: 250px;
+   height: 15px;
+   border-radius: 4px;
+   border: solid lightgray 1px;
+   
+}
+
+.boton-registrarse{
+   font-family: 'Anaheim';
+   text-align: center;
+   height: 40px;
+   width: 270px;
+   background-color: var(--light-color-acento-1);
+   color: whitesmoke;
+   border-radius: 4px;
+   border: 0px;
+   font-size: 20px;
+} 
+
+.boton-registrarse:hover{
+background-color: var(--light-color-acento-3);
+}
+
