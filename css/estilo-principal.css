@@ -11,11 +11,90 @@ body{
    font-family: 'Maitree';
 }
 
-#navegacion-categoria {
-   background-color: var(--light-color-acento-3);
-   font-family: 'Nunito';
-  
+#encabezado-principal #header-container-columnas{
+   display: flex;
+
 }
+
+
+#encabezado-principal #header-container-columnas div{
+   display: flex;
+
+   padding: 1em;
+}
+
+
+#encabezado-principal #header-container-columnas #header-columna-search{
+   width: 90%;
+ }
+
+#encabezado-principal #header-container-columnas #header-columna-search #container-span-input{
+   width: 100%;
+   border-bottom: 1px black solid;
+
+   padding: 0;
+   display: flex;
+   align-items: center;
+}
+
+#encabezado-principal #header-container-columnas #header-columna-search #search{
+  width: 100%;
+  background: var(--light-color-fondo);
+  border: none;
+   padding: 15px;
+}
+
+#encabezado-principal #header-container-columnas .header-container-columna .header-container-columna-icons a{
+  color: black;
+}
+#encabezado-principal #header-container-columnas .header-container-columna .header-container-columna-icons a:hover{
+   color: var(--light-color-fondo);
+   text-shadow: 0 0 10px var(--light-color-acento-1), 0 0 20px var(--light-color-acento-1),  0 0 30px var(--light-color-acento-1) ;
+ }
+
+
+
+#encabezado-principal #header-container-columnas #header-columna-search #search:focus{
+   outline: none;
+ }
+
+
+
+
+
+
+
+
+
+#navegacion-categoria {
+   background-color: var(--light-color-fondo);
+
+   
+   font-family: 'Nunito';
+   display: flex;
+   justify-content: space-between;
+}
+
+#navegacion-categoria .tab-categoria{
+   background: var( --light-color-fondo);
+   outline: 1px solid var(--light-color-acento-1);
+   color:var(--light-color-acento-3) ;
+   text-align: center;
+   padding: 2em;
+   width: 20%;
+   transition: color .5s;
+   transition: background .7s;  
+}
+
+#navegacion-categoria .tab-categoria:hover {
+
+   background-color: var(--light-color-acento-1);
+   color: var(--light-color-fondo);
+   font-weight: 800;
+   scale: 1.09;
+}
+
+
 /* PRIMER COMMIT*/
 #navegacion-categoria a{
    color: var(--dark-color-texto);

@@ -12,23 +12,51 @@
    <link rel="stylesheet" href="_core/css/temas_colores_fuentes.css">
    <link rel="stylesheet" href="css/estilo-logo.css">
    <link rel="stylesheet" href="css/estilo-articulos.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
    <header id="encabezado-principal">
-      <h1>ENCABEZADO PRINCIPAL, PRIMERA LINEA --- LOGO+BUSCADOR+ICONOS</h1>
-      <img class="logo-biblio" src="./assets/img/logo BiblioNet.svg">
-      <h1>BiblioNet</h1>
-      <h1>ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</h1>
+      <!--<h1>ENCABEZADO PRINCIPAL, PRIMERA LINEA --- LOGO+BUSCADOR+ICONOS</h1>-->
+      <!--<img class="logo-biblio" src="./assets/img/logo BiblioNet.svg">-->
+      <!--<h1>BiblioNet</h1>-->
+      <div id="header-container-columnas">
+         <div class="header-container-columna" id="header-columna-icono-principal"> 
+            <img class="logo-biblio" src="./assets/img/logo BiblioNet.svg">
+         </div>
+         <div class="header-container-columna" id="header-columna-search">
+            <div id="container-span-input">
+               <span class="fas fa-search"></span>  <input type="search" placeholder="Search" id="search"> 
+            </div>
+         </div>
+         <!--<input type="text"  value="" placeholder="Buscar" />
+         <input class="button" type="submit" value="" />-->
+         <div class="header-container-columna">
+            
+            <div class="header-container-columna-icons"> 
+               <a href="#"><span class="fas fa-user"></span></a>
+            </div>
+
+            <div class="header-container-columna-icons"> 
+               <a href="#"><span class="fas fa-heart"></span></a>
+            </div>
+
+            <div class="header-container-columna-icons"> 
+               <a href="#"><span class="fas fa-cart-plus"></span></a>
+            </div>
+
+      </div>
+      </div>
+      <!--<h1>ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</h1>-->
    </header>
 
    <main>
       <nav id="navegacion-categoria">
-         <a href="#" id="tab-categoria-1" class="tab-categoria">Arte, Arquitectura y Diseño</a>
-         <a href="#" id="tab-categoria-2" class="tab-categoria">Divulgación Científica</a>
-         <a href="#" id="tab-categoria-3" class="tab-categoria">Derecho y Ciencias Sociales</a>
-         <a href="#" id="tab-categoria-4" class="tab-categoria">Deportes y Recreación</a>
-         <a href="#" id="tab-categoria-5" class="tab-categoria">Fantasía, Ciencia ficción y Terror</a>
+         <a href="#" id="navegacion-categoria-1" class="tab-categoria">Arte, Arquitectura y Diseño</a>
+         <a href="#" id="navegacion-categoria-2" class="tab-categoria">Divulgación Científica</a>
+         <a href="#" id="navegacion-categoria-3" class="tab-categoria">Derecho y Ciencias Sociales</a>
+         <a href="#" id="navegacion-categoria-4" class="tab-categoria">Deportes y Recreación</a>
+         <a href="#" id="navegacion-categoria-5" class="tab-categoria">Fantasía, Ciencia ficción y Terror</a>
       </nav>
 
       <section id="seccion-filtros">
