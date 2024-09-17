@@ -2,7 +2,9 @@
 .formulario{
    border: solid black 3px ;
    width: 380px;
-   margin: 20px;
+   margin: 20px auto;
+   
+   
 }
 
 .header{
@@ -15,8 +17,6 @@
    padding: 0px;
    text-align: center;
    margin: 10px;
-   font-family: 'Anaheim';
-
 }
 
 .input-Text{
@@ -44,4 +44,11 @@
 .boton-registrarse:hover{
 background-color: var(--light-color-acento-3);
 }
-
+.parrafo-login{
+   font-family: 'Anaheim';
+   font-size: 16px;
+}
+.parrafo-footer{
+   font-family: 'Anaheim';
+   font-size: 12px;
+}
