@@ -1,55 +1,67 @@
 @import url("../_core/css/temas_colores_fuentes.css");
+
+*{
+   margin: 0px;
+   padding: 0px;
+   box-sizing: border-box;
+   font-family: 'Nunito';
+}
+
 .formulario{
-   border: solid black 3px ;
    width: 380px;
-   margin: 20px auto;
-   
-   
+   padding: 30px;
+   border: 3px solid var(--light-color-acento-2);
+   margin: 100px auto;
+   background: var(--light-color-fondo);
+   text-align: center;
 }
 
 .header{
-   font-family: "Nunito";
-   font-size: large;
    text-align: center;
 }
 
 .caja{
-   padding: 0px;
-   text-align: center;
-   margin: 10px;
+ 
+   margin: 20px auto;
+   width: 90%;
 }
 
 .input-Text{
    
+   border: 1px solid var(--light-color-acento-2);
+   border-radius: 3px;
    padding: 10px;
-   width: 250px;
-   height: 15px;
-   border-radius: 4px;
-   border: solid lightgray 1px;
+   width: 100%;
    
 }
 
 .boton-registrarse{
-   font-family: 'Anaheim';
-   text-align: center;
-   height: 40px;
-   width: 270px;
-   background-color: var(--light-color-acento-1);
-   color: whitesmoke;
-   border-radius: 4px;
-   border: 0px;
-   font-size: 20px;
+   background: var(--light-color-acento-1);
+   border: 1px solid var(--light-color-acento-2);
+   color: white;
+   padding: 10px;
+   width: 100%;
+   border-radius: 3px;
+   transition: all .2s;
+
 } 
 
 .boton-registrarse:hover{
-background-color: var(--light-color-acento-3);
+   background: var(--light-color-acento-2);
 }
-.parrafo-login{
-   font-family: 'Anaheim';
-   font-size: 16px;
+
+.boton-registrarse:active{
+   background: var(--light-color-acento-1);
 }
-.parrafo-footer{
-   font-family: 'Anaheim';
-   font-size: 12px;
+
+.caja p a{
+   text-decoration: none;
+   color: var(--light-color-acento-1);
+    font-weight: 900;
+    transition: all .2s;
+}
+
+.caja p a:hover{
+   text-shadow: 0 0 8px var(--light-color-acento-2);
 }
 
