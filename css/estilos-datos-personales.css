@@ -1,1 +1,138 @@
-﻿
+﻿@import url("../_core/css/temas_colores_fuentes.css");
+
+.header{
+   
+  
+}
+
+.form-caja{
+    width: 500px;
+    padding: 20px;
+    border: 3px solid var(--light-color-acento-2);
+    margin: 15px ;
+    background: var(--light-color-fondo);
+    padding-right: 0px;
+ }
+
+ .h2-Mi-usuario{
+   font-family: "Nunito";
+   color: var(--light-color-acento-3);
+   font-weight: 900;
+   margin-bottom: 0px;
+}
+ .p-email{
+   font-family: "Nunito";
+   font-size:14px;
+   color: var(--light-color-acento-1);
+   padding-top: 10px;
+   padding-bottom: 2px;
+ }
+ .header-link{
+   text-decoration: none;
+   color: var(--light-color-acento-1);
+    font-weight: 900;
+    transition: all .2s;
+
+ }
+ 
+ 
+ .caja-email{
+   width: 100%;
+    border-top: solid 1px;
+    margin-top: 20px;
+
+ }
+
+
+ .caja-contraseña{
+  
+    width: 100%;
+    border-top: solid 1px;
+    margin-top: 20px;
+ }
+ .input-Text{
+    
+    border: 1px solid var(--light-color-acento-2);
+    border-radius: 3px;
+    padding: 10px;
+    width: 100%;
+ }
+ 
+ .input-email{
+   width: 95%;
+   height: 30px;
+   border-radius: 5px;
+   border-color: rgb(207, 207, 206);
+   border-top: 0px;
+   border-left: 0px;
+   margin-bottom: 12px;
+
+ }
+ 
+ .boton-guardar-cambios{
+    background: var(--light-color-acento-1);
+    border: 1px solid var(--light-color-acento-2);
+    color: white;
+    padding: 10px;
+    width: 40%;
+    border-radius: 3px;
+    transition: all .2s;
+ 
+ } 
+ .input-password{
+   width: 70%;
+   height: 30px;
+   border-radius: 5px;
+   border-color: rgb(207, 207, 206);
+   border-top: 0px;
+   border-left: 0px;
+   font-size: 20px;
+   background-color: rgba(211, 209, 209, 0.685);
+ }
+
+ .p-password{
+   font-family: "Nunito";
+   font-size:14px;
+   color: var(--light-color-acento-1);
+   padding-top: 10px;
+   padding-bottom: 2px;
+ }
+ .boton-guardar-cambios:hover{
+    background: var(--light-color-acento-2);
+ }
+
+ .input-password:hover{
+   background: white;
+}
+ .boton-guardar-cambios:active{
+    background: var(--light-color-acento-1);
+ }
+
+ .boton-cambiar{
+   background: var(--light-color-acento-1);
+   border: 1px solid var(--light-color-acento-2);
+   color: white;
+   padding: 10px;
+   width: 20%;
+   border-radius: 3px;
+   transition: all .2s;
+ } 
+ 
+ .boton-cambiar:hover{
+    background: var(--light-color-acento-2);
+ }
+ 
+ .boton-cambiar:active{
+    background: var(--light-color-acento-1);
+ }
+ 
+ .caja p a{
+    text-decoration: none;
+    color: var(--light-color-acento-1);
+     font-weight: 900;
+     transition: all .2s;
+ }
+ 
+ .caja p a:hover{
+    text-shadow: 0 0 8px var(--light-color-acento-2);
+ }
