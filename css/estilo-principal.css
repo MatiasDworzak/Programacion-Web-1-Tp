@@ -111,7 +111,7 @@ body{
    display: flex;
    justify-content: space-evenly;
    flex-wrap: wrap;
-   padding: 20px 0px;
+   padding: 30px 0px;
    
 }
 
@@ -121,18 +121,22 @@ body{
    max-height: auto;
    border: solid 2px var(--light-color-fondo);
    background-color: var(--light-color-acento-1);
-    color: var(--light-color-fondo);
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    border-radius: 10px;
-    text-align: center;
+   color: var(--light-color-fondo);
+   display: flex;
+   flex-direction: column;
+   margin: 10px;
+   border-radius: 10px;
+   text-align: center;
     
+}
+
+.articulo-categoria .detalle-articulo{
+   padding: 10px;
 }
 
 .articulo-categoria .header-articulo p{
 /*echo para ver las dimensiones de la caja*/
-   outline: rgba(255, 255, 255, 0.195) 2px solid;
+   outline: rgba(255, 255, 255, 0) 2px solid;
 }
 
 
@@ -143,7 +147,7 @@ body{
 
 .articulo-categoria .detalle-articulo p {
    /*echo para ver las dimensiones de la caja*/
-   outline: rgba(255, 255, 255, 0.315) 2px solid;
+   outline: rgba(255, 255, 255, 0) 2px solid;
    margin: 0px;
 }
 
@@ -156,11 +160,12 @@ body{
    font-family: 'Maitree';
    display: flex;
    justify-content: space-around;
+   align-items: center;
 }
 
 #footer-principal div {
    /*echo para ver las dimensiones de la caja*/
-   outline: rgb(255, 255, 255) 2px solid;
+   outline: rgba(255, 255, 255, 0.106) 2px solid;
 }
 
 #qr-code {
