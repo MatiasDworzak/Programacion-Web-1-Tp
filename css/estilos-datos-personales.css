@@ -9,7 +9,7 @@
     width: 500px;
     padding: 20px;
     border: 3px solid var(--light-color-acento-2);
-    margin: 15px ;
+    margin: 15px auto;
     background: var(--light-color-fondo);
     padding-right: 0px;
  }
@@ -173,10 +173,13 @@
    background: var(--light-color-acento-1);
    border: 1px solid var(--light-color-acento-2);
    color: white;
-   padding: 10px;
+   padding: 9px;
    width: 20%;
    border-radius: 3px;
    transition: all .2s;
+
+   position: relative;
+   bottom: 1.7px;
  } 
  
  .boton-cambiar:hover{
@@ -196,4 +199,11 @@
  
  .caja p a:hover{
     text-shadow: 0 0 8px var(--light-color-acento-2);
+ }
+
+ .fa-circle{
+  color: var(--light-color-acento-1);
+  font-size: 4px;
+  position: relative;
+  bottom: 2.6px;
  }
