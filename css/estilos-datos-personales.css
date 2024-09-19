@@ -34,7 +34,50 @@
     transition: all .2s;
 
  }
- 
+.caja-nombre-apellido{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+ .caja-p-input-nombre{
+   width: 50%;
+  
+ }
+ .caja-p-input-apellido{
+   width: 50%;
+
+ }
+ .caja-tipo-numero-doc-fecha-nac{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+  
+}
+ .caja-p-input-tipo{
+   width: 25%;
+   
+ }
+ .caja-p-input-numero-doc{
+   width: 30%;
+  
+ }
+ .caja-p-input-fnac{
+   width: 30%;
+  
+ }
+
+ .caja-tel-num-email-sec{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+ .caja-p-input-tel-num{
+   width: 50%;
+  
+ }
+ .caja-p-input-email-sec{
+   width: 50%;
+ }
  
  .caja-email{
    width: 100%;
@@ -43,6 +86,10 @@
 
  }
 
+ .datos-personales{
+   padding-bottom: 10px;
+   border-bottom: solid 1px;
+ }
 
  .caja-contraseña{
   
@@ -74,7 +121,7 @@
     border: 1px solid var(--light-color-acento-2);
     color: white;
     padding: 10px;
-    width: 40%;
+    width: 34%;
     border-radius: 3px;
     transition: all .2s;
  
@@ -96,6 +143,20 @@
    color: var(--light-color-acento-1);
    padding-top: 10px;
    padding-bottom: 2px;
+ }
+
+ .separador{
+   border-top: solid 1px;
+   width: 100%;
+   margin-top: 15px;
+   margin-bottom: 15px;
+ }
+
+ .p-nombre-appelido{
+   display: flexbox;
+ }
+ .p-nombre-appelido > p {
+   margin: 0;
  }
  .boton-guardar-cambios:hover{
     background: var(--light-color-acento-2);
