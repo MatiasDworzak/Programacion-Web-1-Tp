@@ -229,6 +229,7 @@ body{
    outline: var(--light-color-acento-2) 1px solid;
    margin: 1em;
    padding: 10px 2em;
+   transition: flex-grow .5s;
 }
 
 #footer-principal .footer-principal-div h3 {
@@ -290,4 +291,11 @@ body{
    color: var(--light-color-acento-2);
    font-size: 1.22em;
   
+}
+
+
+#footer-principal .footer-principal-div:hover {
+
+   flex-grow: .7;
+
 }
