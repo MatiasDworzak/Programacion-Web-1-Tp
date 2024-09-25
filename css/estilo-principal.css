@@ -3,6 +3,7 @@
 body{
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
 }
 
 #encabezado-principal {
@@ -209,22 +210,92 @@ body{
 
    /*Estilos footer*/
 
+
+
+
 #footer-principal {
    background-color: var(--light-color-texto);
-   color: white;
+   color: rgba(255, 255, 255, 0.817);
    font-family: 'Maitree';
    display: flex;
-   justify-content: space-around;
+   justify-content: center;
    align-items: center;
+   padding: 3em;
 }
 
-#footer-principal div {
-   /*echo para ver las dimensiones de la caja*/
-   outline: rgba(255, 255, 255, 0.106) 2px solid;
+#footer-principal .footer-principal-div {
+   width: 400px;
+   height: 400px;
+   outline: var(--light-color-acento-2) 1px solid;
+   margin: 1em;
+   padding: 10px 2em;
+   transition: flex-grow .5s;
 }
+
+#footer-principal .footer-principal-div h3 {
+   padding: .5em 0;
+   color: var(--light-color-acento-2);
+}
+
+
+
+#footer-principal .footer-principal-div div p {  
+   font-size: 1.2em;
+}
+#footer-principal .footer-principal-div div p a{  
+   color: rgba(255, 255, 255, 0.817);
+   text-decoration: none;
+   transition: all .3s;
+}
+
+
+#footer-principal #footer-central div {
+   display: flex;
+   justify-content: center;
+   padding: .7em;
+}
+
+
+
+#footer-principal #footer-central div a{
+   color: rgba(255, 255, 255, 0.817);
+   margin-left: 1.2em;
+   margin-right: 1.2em;
+   transition: scale .3s;
+}
+
+
+#footer-principal #footer-central div i{
+   font-size: 4em;
+
+}
+
 
 #qr-code {
-   width:100px;
-   height:100px;
+   width:200px;
+   height:200px;
 }
 
+
+
+/* PSEUDOCLASES */
+
+/* Hover*/
+#footer-principal #footer-central div a:hover{
+   color: var(--light-color-acento-2);
+   scale: 1.5;
+
+}
+
+#footer-principal .footer-principal-div div p a:hover{  
+   color: var(--light-color-acento-2);
+   font-size: 1.22em;
+  
+}
+
+
+#footer-principal .footer-principal-div:hover {
+
+   flex-grow: .7;
+
+}
