@@ -102,6 +102,61 @@ body{
    text-decoration: none;
 }
 
+/* Estilo de la seccion FILTROS */
+
+#seccion-filtros-container-columnas{
+   font-family: 'Nunito';
+   background-color: var(--light-color-acento-2);
+   display: flex;
+   justify-content: space-around;
+   padding: 10px;
+   color: var(--light-color-fondo);
+   
+}
+
+.filtro-columna{
+   display: flex;
+   padding: 20px;
+   transition: color 0.5s;
+}
+
+.flecha-arriba{
+   position: relative;
+   top: 5px;
+   left: 2.5px;
+}
+
+#seccion-filtros-container-columnas-columna-1{
+
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   font-size: 12px;
+   padding: 0;
+}
+
+#seccion-filtros-container-columnas-columna-1 h2{
+
+   margin-top: 0;
+   margin-bottom: 10px;
+
+}
+
+#seccion-filtros-container-columnas-columna-1 h3{
+
+   margin: 0;
+   transition: color 0.5s;
+}
+
+#seccion-filtros-container-columnas-columna-1 h3:hover,
+#seccion-filtros-container-columnas-columna-2:hover, 
+#seccion-filtros-container-columnas-columna-3:hover, 
+#seccion-filtros-container-columnas-columna-4:hover,
+#seccion-filtros-container-columnas-columna-5:hover{
+
+   cursor: pointer;
+   color: white;
+}
 
 /*Estilos de las categorias*/
 
