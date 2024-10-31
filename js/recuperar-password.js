@@ -4,15 +4,23 @@ const expresionRegularEmail = /^.+\@.+\.(com|org|net)$/;
 
 let inputEmail = document.getElementById('email'); // agarro el input del email del html
 
+let inputSubmit = document.getElementById('btn'); // agarro el boton
+
+let label = document.getElementById('info-email'); // agarro el label asociado al input del email 
+                                                //(donde se pondran los distintos mensajes dependiendo del 
+                                                //tipo de norma que no este cumpliendo el usuario)
+
+// aplicamos estilos al boton para darle un aspecto de desactivado de arranque.
+inputSubmit.style.backgroundColor = "#d3d3d3";
+inputSubmit.style.color = "#9a9a9a;"
+inputSubmit.style.border = "1px solid #c0c0c0";
+inputSubmit.style.opacity = "0.6";
+
 inputEmail.addEventListener('change',estaVacioElInput); //  al evento "change" (se activa cuando cambian el value del input y le dejan de hacer focus al mismo) 
                                                         //  del input del email le asocio la funcion que afectara al html
 
 function estaVacioElInput(){ 
 
-    let inputSubmit = document.getElementById('btn'); // agarro el boton
-    let label = document.getElementById('info-email'); // agarro el label asociado al input del email 
-                                                    //(donde se pondran los distintos mensajes dependiendo del 
-                                                    //tipo de norma que no este cumpliendo el usuario)
 
     if (inputEmail.value == '' || !expresionRegularEmail.test(inputEmail.value)){ // si esta vacio el input o lo que ingreso no cumple el formato de correo entonces 
                                                                                 // se aplica borde rojo al input, se hace visible el label con el respectivo mensaje
@@ -27,12 +35,6 @@ function estaVacioElInput(){
         }else { // en el caso contrario(tenia algo pero no cumplio con el formato del correo), el mensaje sera otro
             label.innerText = "Correo invalido";
         }
-        
-        // aplicamos estilos al boton para darle un aspecto de desactivado.
-        inputSubmit.style.backgroundColor = "#d3d3d3";
-        inputSubmit.style.color = "#9a9a9a;"
-        inputSubmit.style.border = "1px solid #c0c0c0";
-        inputSubmit.style.opacity = "0.6";
     
         inputSubmit.disabled = true; // desactivamos el boton
 
