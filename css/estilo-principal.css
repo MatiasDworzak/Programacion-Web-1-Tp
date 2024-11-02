@@ -6,6 +6,27 @@ body{
    box-sizing: border-box;
 }
 
+
+/*Estilos para carrousel*/
+
+#container-carrousel{
+   background-color: var(--light-color-fondo)
+}
+
+#carouselExampleIndicators{
+   padding: 5px 0px;
+}
+
+.carousel-inner img{
+
+   width: 100%;  
+   height: 55vh;   
+   object-fit: cover;
+   object-position: center;
+}
+
+/*////////////////////////////////*/
+
 #encabezado-principal {
    background-color: var(--light-color-fondo);
    color: var(--light-color-texto);
@@ -119,6 +140,7 @@ body{
    display: flex;
    padding: 20px;
    transition: color 0.5s;
+   justify-content: center;
 }
 
 .flecha-arriba{
@@ -132,7 +154,6 @@ body{
    display: flex;
    flex-direction: column;
    text-align: center;
-   font-size: 12px;
    padding: 0;
 }
 
@@ -140,6 +161,8 @@ body{
 
    margin-top: 0;
    margin-bottom: 10px;
+   font-size: 20px;
+   font-weight: bold;
 
 }
 
@@ -147,6 +170,9 @@ body{
 
    margin: 0;
    transition: color 0.5s;
+   font-size: 15px;
+   font-weight: bold;
+
 }
 
 #seccion-filtros-container-columnas-columna-1 h3:hover,
@@ -198,6 +224,8 @@ body{
 
 .articulo-categoria .detalle-articulo h4 {
    font-family: 'Nunito';
+   font-size: 16px;
+   font-weight: bold;
    margin: 0px;
 }
 
@@ -205,6 +233,10 @@ body{
    /*echo para ver las dimensiones de la caja*/
    outline: rgba(255, 255, 255, 0) 2px solid;
    margin: 0px;
+}
+
+.item-valor-nombre, .item-valor-descripcion{
+   margin-top: 16px;
 }
 
 
