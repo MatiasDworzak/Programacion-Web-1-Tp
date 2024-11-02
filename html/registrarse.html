@@ -5,22 +5,24 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Registrarse</title>
    <link rel="stylesheet" href="../css/estilos-registrarse.css">
+
    <link rel="icon" href="../assets/img/icono.ico">
 </head>
 <body>
-   <form action="#" method="post">
+   <form  id= "registroForm" action="#">
    <div class="formulario">
       <div class="header">
          <h2>Registrarse</h2>
       </div>
-      <div class="caja">
-      <input class="input-Text" type="email" placeholder="Email*" required>
+      <div id= "input" class="caja">
+      <input id="input-mail" type="text" placeholder="Email*" required>
       </div>
-      <div class="caja">
-      <input class="input-Text" type="password" placeholder="Contraseña*" required>
+      <div id= "input" class="caja">
+      <input id="input-contrasenia" type="password" placeholder="Contraseña*" required>
       </div>
+      <div id="mensaje" class="error">  </div>
       <div class="caja">
-      <input type="submit" class="boton-registrarse" value="REGISTRATE">
+      <input type="submit" id="boton-registrarse" class="boton-registrarse" value="REGISTRATE" disabled>
       </div>
       <div class="caja">
          <p class="parrafo-login">¿Ya tenés una cuenta? <a href="login.html"> Iniciar sesion</a></p> 
@@ -31,5 +33,8 @@
       </div>
    </div>
 </form>
+
+
+<script src="../js/registrarse.js"></script>
 </body>
 </html>
