@@ -1,5 +1,9 @@
 ﻿@import url("../_core/css/temas_colores_fuentes.css");
 
+.invisible{ /*usado para hacer desaparecer o aparecer el elemento con js*/
+  display: none; 
+}
+
 
 .form-caja{
     width: 500px;
@@ -79,6 +83,9 @@
    width: 100%;
     border-top: solid 1px;
     margin-top: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 
  }
 
@@ -101,7 +108,7 @@
     width: 100%;
  }
  
- .input-email{
+ .input-ingreso-formato{
    width: 95%;
    height: 30px;
    border-radius: 5px;
@@ -111,8 +118,9 @@
    margin-bottom: 12px;
 
  }
+
  
- .boton-guardar-cambios{
+ .boton-guardar-cambios-activado{
     background: var(--light-color-acento-1);
     border: 1px solid var(--light-color-acento-2);
     color: white;
@@ -122,6 +130,18 @@
     transition: all .2s;
  
  } 
+
+ .boton-guardar-cambios-desactivado{
+  background-color: #d3d3d3;
+  color: #9a9a9a;
+  border: 1px solid #c0c0c0;
+  opacity: 0.6;
+  padding: 10px;
+  width: 34%;
+  border-radius: 3px;
+
+} 
+
  .input-password{
    width: 70%;
    height: 30px;
@@ -154,7 +174,7 @@
  .p-nombre-appelido > p {
    margin: 0;
  }
- .boton-guardar-cambios:hover{
+ .boton-guardar-cambios-activado:hover{
     background: var(--light-color-acento-2);
  }
 
@@ -170,12 +190,13 @@
    border: 1px solid var(--light-color-acento-2);
    color: white;
    padding: 9px;
-   width: 20%;
+   width: 25%;
    border-radius: 3px;
    transition: all .2s;
 
    position: relative;
    bottom: 1.7px;
+   left: 5px;
  } 
  
  .boton-cambiar:hover{
@@ -202,4 +223,12 @@
   font-size: 4px;
   position: relative;
   bottom: 2.6px;
+ }
+
+ .input-error{
+  border-color: red;
+ }
+
+ #btn-formulario-inferior {
+    margin-top: 15px;
  }
