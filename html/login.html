@@ -10,15 +10,18 @@
 </head>
 <body>
 
-   <form class="formulario">
+   <form id="formulario">
 
       <div class="formulario-container-header form-container-centrado formulario-container">
          <h2>Iniciar sesión</h2>
       </div>
 
       <div class="formulario-container-input formulario-container">
-         <input type="email" required placeholder="Email*">
-         <input type="password" required placeholder="Contraseña*">
+         <input id="input-email" type="email"  placeholder="Email*">
+         <label id="label-input-email" for="input-email"></label>
+
+         <input id="input-contraseña" type="password"  placeholder="Contraseña*">
+         <label id="label-input-contraseña" for="input-contraseña"></label>
       </div>
 
       <div class="formulario-container-olvidaste-tu-contraseña formulario-container">
@@ -28,7 +31,7 @@
       </div>
 
       <div class="formulario-container-input-2 formulario-container">
-         <input type="submit" value="INICIAR SESIÓN">
+         <input id="input-submit" type="submit" value="INICIAR SESIÓN" disabled>
       </div>
 
       <div class="formulario-container-texto form-container-centrado formulario-container">
@@ -44,6 +47,9 @@
             de BiblioNet
          </p>
       </div>
+
+
+      <script src="../js/login.js"></script>
 
    </form>
 </body>
