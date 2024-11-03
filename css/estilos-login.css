@@ -13,7 +13,7 @@ body a{
 
 }
 /**/
-.formulario{
+#formulario{
     width: 380px;
     padding: 30px;
     border: 3px solid var(--light-color-acento-2);
@@ -23,7 +23,7 @@ body a{
 
 
 /*DIVS DEL FORMULARIO*/
-.formulario div {
+#formulario div {
     margin-bottom: 20px;
 
 }
@@ -62,11 +62,17 @@ body a{
 }
 
 
+
+
 /* INPUT SUMBIT */
 .formulario-container-input-2 input{
-    background: var(--light-color-acento-1);
+    background:rgb(111, 111, 111);
+    opacity: .7;
     color: white;
-    transition: all .2s;
+}
+
+.input-submit-verificado {
+    background: green;
 }
 
 
@@ -87,6 +93,9 @@ body a{
 }
 
 
+
+
+
 /* PSEUDOCLASES */
 
 .formulario-container #olvidaste-tu-contraseña:hover,
@@ -96,12 +105,18 @@ body a{
     text-shadow: 0 0 8px var(--light-color-acento-2);
 }
 
-/* INPUT SUMBIT */
+
+/* INPUT email y contraseña*/
+.formulario-container-input input:focus{
+    outline: var(--light-color-acento-2) 2px solid;
+}
+
+/* INPUT SUMBIT 
 .formulario-container-input-2 input:hover{
     background: var(--light-color-acento-2);
 }
-
-.formulario-container-input-2 input:active{
+*/
+/*.formulario-container-input-2 input:active{
     background: var(--light-color-acento-1);
-}
+}*/
 
