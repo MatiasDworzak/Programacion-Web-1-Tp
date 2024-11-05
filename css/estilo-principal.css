@@ -10,19 +10,20 @@ body{
 /*Estilos para carrousel*/
 
 #container-carrousel{
-   background-color: var(--light-color-fondo)
+   background-color: var(--light-color-acento-2);
 }
 
 #carouselExampleIndicators{
    padding: 5px 0px;
+   
 }
 
 .carousel-inner img{
-
-   width: 100%;  
-   height: 55vh;   
-   object-fit: cover;
+   max-width: 50vh;
+   max-height: 50vh;
+   margin: 0 auto;
    object-position: center;
+   object-fit: contain;
 }
 
 /*////////////////////////////////*/
