@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,111 +8,129 @@
    <link rel="stylesheet" href="../css/estilos-datos-personales.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
    <div class="form-caja">
       <div class="header">
-         <a  class="header-link" href="#">Mi cuenta</a>
+         <a class="header-link" href="#">Mi cuenta</a>
          <i class="fas fa-solid fa-circle"></i>
          <a class="header-link" href="#">Mi usuario</a>
       </div>
-      <form action="#"  method="post">
-         <div >
+      <form action="#" method="post">
+         <div>
             <h2 class="h2-Mi-usuario"><b>Mi usuario</b></h2>
          </div>
          <div class="caja-email">
             <p class="p-email"><b> Email principal</b></p>
-            <input type="email" class="input-email" placeholder="Email*" required>
+            <input id="email" type="email" class="input-ingreso-formato" placeholder="Email*" required>
+            <label id="label-email" class="invisible" for="email"></label>
          </div>
          <div class="caja-boton-guardar-cambios">
-            <input  type="submit" class="boton-guardar-cambios" value="GUARDAR CAMBIOS">
+            <input id = "btn-1" type="submit" class="boton-guardar-cambios-activado" value="GUARDAR CAMBIOS">
          </div>
+      </form>
+      <form id="form-password" action="#" method="post">
          <div class="caja-contraseña">
             <p class="p-password"><b>Contraseña</b></p>
-            <input type="password" class="input-password" placeholder="**********">
+            <input type="password" id ="input-password" class="input-password input-ingreso-formato" placeholder="**********">
             <input type="submit" class="boton-cambiar" value="CAMBIAR">
+            <label for="input-password" id ="contenedor-mensaje-password"></label>
          </div>
-   </form>
-         <div class="separador">
+      </form>
+      <div class="separador">
 
-         </div>
+      </div>
       <div class="header">
-         <a  class="header-link" href="#">Mi cuenta</a>
+         <a class="header-link" href="#">Mi cuenta</a>
          <i class="fas fa-solid fa-circle"></i>
          <a class="header-link" href="#">Datos personales</a>
       </div>
-      <form action="#"  method="post">
-         <div class="datos-personales" >
+
+      <form id = "form-inferior" action="#" method="post">
+         <div class="datos-personales">
             <h2 class="h2-Mi-usuario"><b>Datos personales</b></h2>
          </div>
-         <div class="caja-nombre-apellido"> <! Azul >
-            <div class="caja-p-input-nombre" > <! Naranja >  
-               <div class="caja-p-nombre"> <! celeste>
+         <div class="caja-nombre-apellido">
+            <div class="caja-p-input-nombre">
+               <div class="caja-p-nombre">
                   <p class="p-email"><b>Nombre</b></p>
                </div>
-               <div class="input-nombre"> <! celeste>
-                  <input type="text" class="input-email" placeholder="Nombre*" required>
+               <div class="input-nombre">
+                  <input id = "input-nombre" type="text" name="nombre" class="input-ingreso-formato" placeholder="Nombre*" required>
+                  <label id = "contenedor-mensaje-nombre" for="input-nombre"></label>
                </div>
             </div>
-            <div class="caja-p-input-apellido"> <! Naranja > 
-               <div class="caja-apellido"> <! celeste>
+            <div class="caja-p-input-apellido">
+               <div class="caja-apellido">
                   <p class="p-email"><b>Apellido</b></p>
                </div>
-               <div class="input-apellido"> <! celeste>
-                  <input type="text" class="input-email" placeholder="Apellido*" required>
+               <div class="input-apellido">
+                  <input id = "input-apellido" type="text" name="apellido" class="input-ingreso-formato" placeholder="Apellido*" required>
+                  <label id = "contenedor-mensaje-apellido" for="input-apellido"></label>
                </div>
             </div>
          </div>
-         <div class="caja-tipo-numero-doc-fecha-nac"> <! Azul >
-            <div class="caja-p-input-tipo" > <! Naranja >  
-               <div class="caja-p-tipo"> <! celeste>
+         <div class="caja-tipo-numero-doc-fecha-nac">
+            <div class="caja-p-input-tipo">
+               <div class="caja-p-tipo">
                   <p class="p-email"><b>Tipo</b></p>
                </div>
-               <div class="input-tipo"> <! celeste>
-                  <input type="text" class="input-email" placeholder="Tipo*" required>
+               <div class="input-tipo">
+                  <select id="select-tipo" name="tipo" class="input-ingreso-formato" required>
+                     <option value="0" >Tipo*</option>
+                     <option value="1">DNI</option>
+                     <option value="2">CI</option>
+                     <option value="3">PASAPORTE</option>
+                  </select>
+                  <label id = "contenedor-mensaje-tipo" for="select-tipo"></label>
                </div>
             </div>
-            <div class="caja-p-input-numero-doc"> <! Naranja > 
-               <div class="caja-numero-doc"> <! celeste>
+            <div class="caja-p-input-numero-doc">
+               <div class="caja-numero-doc">
                   <p class="p-email"><b>Numero Doc</b></p>
                </div>
-               <div class="input-numero-doc"> <! celeste>
-                  <input type="number" class="input-email" placeholder="Numero doc*" required>
+               <div class="input-numero-doc">
+                  <input id= "input-documento" type="text" name="documento" class="input-ingreso-formato" placeholder="Numero doc*" required>
+                  <label id = "contenedor-mensaje-documento" for="input-documento"></label>
                </div>
             </div>
-            <div class="caja-p-input-fnac"> <! Naranja > 
-               <div class="caja-fnac"> <! celeste>
+            <div class="caja-p-input-fnac">
+               <div class="caja-fnac">
                   <p class="p-email"><b>Fecha de Nacimiento</b></p>
                </div>
-               <div class="input-fecha nac"> <! celeste>
-                  <input type="date" class="input-email" placeholder="Fecha de Nacimiento*" required>
+               <div class="input-fecha nac">
+                  <input id = "input-nacimiento" type="date" name="fecha-nac" class="input-ingreso-formato" placeholder="Fecha de Nacimiento*" required>
+                  <label id = "contenedor-mensaje-nacimiento" for="input-nacimiento"></label>
                </div>
             </div>
          </div>
-         <div class="caja-tel-num-email-sec"> <! Azul >
-            <div class="caja-p-input-tel-num" > <! Naranja >  
-               <div class="caja-p-tel-num"> <! celeste>
+         <div class="caja-tel-num-email-sec">
+            <div class="caja-p-input-tel-num">
+               <div class="caja-p-tel-num">
                   <p class="p-email"><b>Telefono Celular</b></p>
                </div>
-               <div class="input-tel-num"> <! celeste>
-                  <input type="number" class="input-email" placeholder="Telefono Celular" required>
+               <div class="input-tel-num">
+                  <input  id = "input-num-tel" type="text" name="num-telefono" class="input-ingreso-formato" placeholder="Telefono Celular" required>
+                  <label id = "contenedor-mensaje-num-tel" for="input-num-tel"></label>
                </div>
             </div>
-            <div class="caja-p-input-email-sec"> <! Naranja > 
-               <div class="caja-email-sec"> <! celeste>
+            <div class="caja-p-input-email-sec">
+               <div class="caja-email-sec">
                   <p class="p-email"><b>Email Secundario</b></p>
                </div>
-               <div class="input-email-sec"> <! celeste>
-                  <input type="email" class="input-email" placeholder="Email Secundario">
+               <div class="input-email-sec">
+                  <input id = 'input-email-secundario' name="email-secu" type="text" class="input-ingreso-formato" placeholder="Email Secundario">
+                  <label id = "contenedor-mensaje-email-secundario" for="input-email-secundario"></label>
                </div>
             </div>
          </div>
          <div class="caja-boton-guardar-cambios">
-            <input  type="submit" class="boton-guardar-cambios" value="GUARDAR CAMBIOS">
+            <input id = "btn-formulario-inferior" type="submit" name="guardar" class="boton-guardar-cambios-activado" value="GUARDAR CAMBIOS">
          </div>
-   </form>
+      </form>
    </div>
-   <div>
 
-   </div>
+   <script src="../js/datos-personales.js"></script>
 </body>
+
 </html>

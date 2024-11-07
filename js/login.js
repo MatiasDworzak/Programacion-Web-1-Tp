@@ -1,55 +1,72 @@
-let permitirEnvio = false;
 let submit = document.getElementById('input-submit');
 
-submit.style.backgroundColor = "#d3d3d3";
-submit.style.color = "#9a9a9a;"
-submit.style.border = "1px solid #c0c0c0";
-submit.style.opacity = "0.6";
-submit.disabled = true;
+const inputEmail = document.getElementById('input-email');
+const labelEmail = document.getElementById('label-input-email');
 
+ 
 
+function verificarEmail(){
 
-function verificarMail(){
+    let valorVerificadoEmail = /^[a-zA-Z_]+@[a-zA-Z]+\.(com|org|net)$/;
+    let emailAceptado = valorVerificadoEmail.test(inputEmail.value);
 
-    let labelEmail = document.getElementById("label-email");   
-
-    if(email.value.trim() === '') {
-        labelEmail.innerText = 'Por favor ingresa un email';
-        labelEmail.classList.add("labels-error");
-        submit.disabled = true;
-    } else {
+    if(inputEmail.value.trim() === ''){
+        labelEmail.textContent = 'Completar campo';
+        labelEmail.style.color = 'red';
+        labelEmail.style.paddingBottom = '5px';
+    } else if(!emailAceptado){
+        labelEmail.textContent = 'Email invalido'; 
+        labelEmail.style.color = 'red';    
+    }else{
         labelEmail.textContent = '';
-        labelEmail.classList.remove("labels-error");
-        submit.style.backgroundColor = 'red';
-        submit.style.border = '2px solid black';
-        submit.style.color = 'white';
-        submit.disabled = false;
     }
-}
+};
 
+inputEmail.addEventListener('change', verificarEmail);
+
+const inputContraseña = document.getElementById('input-contraseña');
+const labelContraseña = document.getElementById('label-input-contraseña');
 
 function verificarContraseña(){
-    let labelContraseña = document.getElementById("label-contraseña");
 
-    if(contraseña.value.trim() === ''){
-        labelContraseña.innerText = 'Ingresa la contraseña';
-        labelContraseña.classList.add("labels-error");
-        submit.disabled = true;
-    }else {
+    let valorVerificadoContraseña = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#?!%$])[A-Za-z\d#?!%$]{8,12}$/;
+    let contraseñaAceptada = valorVerificadoContraseña.test(inputContraseña.value);
+
+    if(inputContraseña.value.trim() === '' ){
+        labelContraseña.textContent = 'Ingresar contraseña';
+        labelContraseña.style.color = 'red';
+    } else if(!contraseñaAceptada){
+        console.error('contraseña no aceptada');              
+        labelContraseña.textContent = 'Contraseña invalida'; 
+        labelContraseña.style.color = 'red';               
+    }else{
         labelContraseña.textContent = '';
-        labelContraseña.classList.remove("labels-error");
-        submit.style.backgroundColor = 'red';
-        submit.style.border = '2px solid black';
-        submit.style.color = 'white';
-        submit.disabled = false;
     }
 
+};
 
+inputContraseña.addEventListener('change', verificarContraseña);
+
+
+function verificarInputs(){
+
+    let valorVerificadoContraseña = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[#?!%$])[A-Za-z\d#?!%$]{8,12}$/;
+    let contraseñaAceptada = valorVerificadoContraseña.test(inputContraseña.value);
+    let valorVerificadoEmail = /^[a-zA-Z_]+@[a-zA-Z]+\.(com|org|net)$/;
+    let emailAceptado = valorVerificadoEmail.test(inputEmail.value);
+
+    if(inputContraseña .value.trim() !== '' && inputEmail.value.trim() !== '' && contraseñaAceptada == true && emailAceptado == true){
+        submit.disabled = false;
+        submit.style.opacity = '1';
+        submit.style.backgroundColor = '#586e30';
+    }else if(inputContraseña .value.trim() === '' || inputEmail.value.trim() === '' || !contraseñaAceptada || !emailAceptado ){
+        submit.disabled = true;
+        submit.style.backgroundColor = 'gray';
+    }
 }
 
 
-let contraseña = document.getElementById("input-contraseña");
-contraseña.addEventListener('change', verificarContraseña);
+inputContraseña.addEventListener('change', verificarInputs);
+inputEmail.addEventListener('change', verificarInputs);
 
-let email = document.getElementById("input-email");
-email.addEventListener('change', verificarMail);
+

@@ -26,7 +26,7 @@
    width: 90%;
 }
 
-.input-Text{
+#input-mail{
    
    border: 1px solid var(--light-color-acento-2);
    border-radius: 3px;
@@ -35,6 +35,18 @@
    
 }
 
+#input-contrasenia{
+   
+   border: 1px solid var(--light-color-acento-2);
+   border-radius: 3px;
+   padding: 10px;
+   width: 100%;
+   
+}
+
+.error{
+   color: red;
+}
 .boton-registrarse{
    background: var(--light-color-acento-1);
    border: 1px solid var(--light-color-acento-2);
@@ -45,6 +57,11 @@
    transition: all .2s;
 
 } 
+
+.boton-registrarse:disabled {
+   background-color: gray; /* Cambia el color a gris */
+   cursor: not-allowed; /* Cambia el cursor para indicar que no se puede hacer clic */
+}
 
 .boton-registrarse:hover{
    background: var(--light-color-acento-2);

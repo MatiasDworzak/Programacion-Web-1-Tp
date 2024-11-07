@@ -6,6 +6,28 @@ body{
    box-sizing: border-box;
 }
 
+
+/*Estilos para carrousel*/
+
+#container-carrousel{
+   background-color: var(--light-color-acento-2);
+}
+
+#carouselExampleIndicators{
+   padding: 5px 0px;
+   
+}
+
+.carousel-inner img{
+   max-width: 50vh;
+   max-height: 50vh;
+   margin: 0 auto;
+   object-position: center;
+   object-fit: contain;
+}
+
+/*////////////////////////////////*/
+
 #encabezado-principal {
    background-color: var(--light-color-fondo);
    color: var(--light-color-texto);
@@ -119,6 +141,7 @@ body{
    display: flex;
    padding: 20px;
    transition: color 0.5s;
+   justify-content: center;
 }
 
 .flecha-arriba{
@@ -132,7 +155,6 @@ body{
    display: flex;
    flex-direction: column;
    text-align: center;
-   font-size: 12px;
    padding: 0;
 }
 
@@ -140,6 +162,8 @@ body{
 
    margin-top: 0;
    margin-bottom: 10px;
+   font-size: 20px;
+   font-weight: bold;
 
 }
 
@@ -147,6 +171,9 @@ body{
 
    margin: 0;
    transition: color 0.5s;
+   font-size: 15px;
+   font-weight: bold;
+
 }
 
 #seccion-filtros-container-columnas-columna-1 h3:hover,
@@ -183,7 +210,17 @@ body{
    margin: 10px;
    border-radius: 10px;
    text-align: center;
-    
+   transition: all .5s;
+}
+
+.articulo-categoria-mouseenter{ /*para js*/
+   scale: 1.03;
+}
+
+.articulo-categoria-mousedown{ /*para js*/
+   border: solid 2px var(--light-color-acento-2);
+   background-color: var(--light-color-fondo);
+   color: var(--light-color-acento-2);
 }
 
 .articulo-categoria .detalle-articulo{
@@ -198,6 +235,8 @@ body{
 
 .articulo-categoria .detalle-articulo h4 {
    font-family: 'Nunito';
+   font-size: 16px;
+   font-weight: bold;
    margin: 0px;
 }
 
@@ -207,7 +246,17 @@ body{
    margin: 0px;
 }
 
+.item-valor-nombre, .item-valor-descripcion{
+   margin-top: 16px;
+}
 
+.item-valor-descripcion{
+   padding: 0px 6px;
+}
+
+.header-articulo {
+   font-weight: bold;
+}
    /*Estilos footer*/
 
 

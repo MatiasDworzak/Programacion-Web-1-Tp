@@ -13,36 +13,29 @@
 
    <form id="formulario">
 
-      <div class="formulario-container-header 
-                  form-container-centrado 
-                  formulario-container">
+      <div class="formulario-container-header form-container-centrado formulario-container">
          <h2>Iniciar sesión</h2>
       </div>
 
-      <div class="formulario-container-input 
-                  formulario-container">
-         <input id="input-email"  type="email" required placeholder="Email*">
-         <label id="label-email" class="labels-error" for="input-email"></label>
-         
-         <input id="input-contraseña" type="password" required placeholder="Contraseña*">
-         <label id="label-contraseña" class="labels-error" for="input-contraseña"></label>
+      <div class="formulario-container-input formulario-container">
+         <input id="input-email" type="email"  placeholder="Email*">
+         <label id="label-input-email" for="input-email"></label>
+
+         <input id="input-contraseña" type="password"  placeholder="Contraseña*">
+         <label id="label-input-contraseña" for="input-contraseña"></label>
       </div>
 
-      <div class="formulario-container-olvidaste-tu-contraseña 
-                  formulario-container">
+      <div class="formulario-container-olvidaste-tu-contraseña formulario-container">
          <a id="olvidaste-tu-contraseña" href="recuperar-password.html">
             ¿Olvidaste tu contraseña?
          </a>
       </div>
 
-      <div class="formulario-container-input-2 
-                  formulario-container">
-         <input id="input-submit" type="submit" value="INICIAR SESIÓN">
+      <div class="formulario-container-input-2 formulario-container">
+         <input id="input-submit" type="submit" value="INICIAR SESIÓN" disabled>
       </div>
 
-      <div class="formulario-container-texto 
-                  form-container-centrado 
-                  formulario-container">
+      <div class="formulario-container-texto form-container-centrado formulario-container">
          <p id="no-tenes-cuenta">¿No tenes cuenta? 
             <a href="registrarse.html"> 
                Registrate
@@ -56,7 +49,9 @@
          </p>
       </div>
 
+
+      <script src="../js/login.js"></script>
+
    </form>
-   <script src="../js/login.js"></script>
 </body>
 </html>

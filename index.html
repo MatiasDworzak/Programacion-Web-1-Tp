@@ -13,6 +13,9 @@
    <link rel="stylesheet" href="css/estilo-logo.css">
    <link rel="stylesheet" href="css/estilo-articulos.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -49,9 +52,6 @@
 
          </div>
       </div>
-      <div id="header-container-carrousel">  <!--FILA 2-->
-         <!--ESPACIO RESERVADO PARA EL CARRUSEL-->
-      </div>
       <!--<h1>ENCABEZADO PRINCIPAL, SEGUNDA LINEA --- CARRUSEL</h1>-->
    </header>
 
@@ -64,7 +64,31 @@
          <a href="#" id="navegacion-categoria-5" class="tab-categoria">Fantasía, Ciencia ficción y Terror</a>
       </nav>
 
-      <section id="seccion-filtros">
+      <div id="container-carrousel">  <!--FILA 2-->
+         <!--ESPACIO RESERVADO PARA EL CARRUSEL-->
+         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+               <!-- aca actua el js -->
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+      </div>
+
+      <!-- <section id="seccion-filtros">
 
          <div id="seccion-filtros-container-columnas">
 
@@ -104,7 +128,7 @@
 
          </div>
 
-      </section>
+      </section> -->
 
       <section id="seccion-categoria">
          <!-- <article style="display:none;" id="categoria00-item01" class="articulo-categoria"> -->
@@ -369,7 +393,9 @@
    </footer>
 
    <script src="https://kit.fontawesome.com/e456e85d7b.js" crossorigin="anonymous"></script>
-
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+   <script src="/js/items-index.js"></script>
+   <script type="module" src="js/carousel-index.js"></script>
    <!-- NO MODIFICAR: realiza la carga de datos -->
    <script type="module" src="_core/js/cargar_datos.js"></script>
 </body>
