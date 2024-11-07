@@ -20,7 +20,12 @@ linksCategorias.forEach(function(linkCategoria) {
          document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > img.item-valor-portada").alt = value["Nombre"];
          document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-descripcion").innerText = value["Descripcion"];
          document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-rating").innerText = value["Rating"];
+      
 
+         ponerEstrellas(value);
+
+         
+      
          for (const property in value) {
             switch(property.split(".")[0]) {
                case "personalizado_1":
@@ -55,4 +60,51 @@ linksCategorias.forEach(function(linkCategoria) {
 
 if(configuracion["modo-test-prod"] === "prod") {
    tabCategoria1.click();  
-};     
+};
+
+
+function ponerEstrellas(value){
+
+   // le damos la clase inline que aplica el display inline para que quede aliniado junto con las estrellas
+   document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-rating").classList.add("inline");
+         
+   // agarramos los contenedores que nos importan
+
+   let contenedorEstrellas = document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > div.contenedor-estrellas");
+
+   let headerArticulo = document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo");
+  
+   if (contenedorEstrellas == null){ // si no existen las estrellas, las creamos
+      headerArticulo.appendChild(estrellas(value["Rating"]));
+  } else {// caso contrario, si existen es porque son viejas(de otra libro), las removemos y hacemos unas nuevas con el Rating correspondiente
+      headerArticulo.removeChild(contenedorEstrellas);
+      headerArticulo.appendChild(estrellas(value["Rating"]));
+  }
+
+}
+
+// Funcion para linea de estrellas dinamica para el rating
+
+function estrellas(cantidadEstrellasAmarillas){
+  let divEstrellas = document.createElement('div');
+  divEstrellas.classList.add('contenedor-estrellas');
+  divEstrellas.classList.add('inline'); // le agregamos la clase inline asi no se pone una linea abajo y queda al lado del numero de rating
+  
+  const cantidadDeEstrellasMaximas = 5;
+
+  for (let i = 0; i < cantidadDeEstrellasMaximas; i++){
+
+      if (i < cantidadEstrellasAmarillas){
+         // aca se ponen las estrellas rellenas
+         divEstrellas.innerHTML += '<i class="fa-solid fa-star"></i>';
+      }else {
+         // aca se ponen las estrellas vacias
+         divEstrellas.innerHTML += '<i class="fa-regular fa-star"></i>';
+      }
+     
+  }
+
+  divEstrellas.style.color = "yellow";
+
+ return divEstrellas;
+};
