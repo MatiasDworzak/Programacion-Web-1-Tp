@@ -1,7 +1,8 @@
 ﻿import libros from "../../data/libros.json" with { type: 'json' };
 import configuracion from "../../config/configuracion.json" with { type: 'json' };
 
-const tabCategoria1 = document.querySelector("#tab-categoria-1");
+
+const tabCategoria0 = document.querySelector("#tab-categoria-0");
 
 var linksCategorias = document.querySelectorAll("a.tab-categoria");
 var articulos;
@@ -9,17 +10,33 @@ var articulos;
 linksCategorias.forEach(function(linkCategoria) {
    linkCategoria.addEventListener("click", function() {
       articulos = ""
-      Object.entries(libros).forEach((entry) => {
+
+
+
+      if (linkCategoria.innerText == 'TODOS'){
+         seccionTodos();
+      } else{
+         borrarClones();
+      }
+
+      cargarLibrosEnBaseACategoria(linkCategoria, document);
+
+   });
+});
+
+
+function cargarLibrosEnBaseACategoria(linkCategoria, elementoHtml){
+   Object.entries(libros).forEach((entry) => {
       const [key, value] = entry;
 
       if (linkCategoria.innerText === value.Categoria)
       {
-         document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-nombre").innerText = value["Nombre"];
-         document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-autor").innerText = value["Autor"];
-         document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > img.item-valor-portada").src = value["Portada"];
-         document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > img.item-valor-portada").alt = value["Nombre"];
-         document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-descripcion").innerText = value["Descripcion"];
-         document.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-rating").innerText = value["Rating"];
+         elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-nombre").innerText = value["Nombre"];
+         elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-autor").innerText = value["Autor"];
+         elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > img.item-valor-portada").src = value["Portada"];
+         elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > img.item-valor-portada").alt = value["Nombre"];
+         elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-descripcion").innerText = value["Descripcion"];
+         elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > header.header-articulo > p.item-valor-rating").innerText = value["Rating"];
       
 
          ponerEstrellas(value);
@@ -29,24 +46,24 @@ linksCategorias.forEach(function(linkCategoria) {
          for (const property in value) {
             switch(property.split(".")[0]) {
                case "personalizado_1":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_1").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_1").innerText = value[property];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_1").innerText = property.split(".")[1];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_1").innerText = value[property];
                   break;
                case "personalizado_2":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_2").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_2").innerText = value[property];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_2").innerText = property.split(".")[1];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_2").innerText = value[property];
                   break;
                case "personalizado_3":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_3").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_3").innerText = value[property];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_3").innerText = property.split(".")[1];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_3").innerText = value[property];
                   break;
                case "personalizado_4":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_4").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_4").innerText = value[property];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_4").innerText = property.split(".")[1];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_4").innerText = value[property];
                   break;
                case "personalizado_5":
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_5").innerText = property.split(".")[1];
-                  document.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_5").innerText = value[property];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > h4.item-campo-personalizado_5").innerText = property.split(".")[1];
+                  elementoHtml.querySelector("article." + value["Id"].split("-")[1] + " > div.detalle-articulo > p.item-valor-personalizado_5").innerText = value[property];
                   break;
             }
          };
@@ -55,11 +72,12 @@ linksCategorias.forEach(function(linkCategoria) {
       };
 
       });
-   });
-});
+}
+
+
 
 if(configuracion["modo-test-prod"] === "prod") {
-   tabCategoria1.click();  
+   tabCategoria0.click();  
 };
 
 
@@ -108,3 +126,67 @@ function estrellas(cantidadEstrellasAmarillas){
 
  return divEstrellas;
 };
+
+// seccion todas
+
+function seccionTodos(){
+
+   const main = document.querySelector('main');
+
+   let section = document.querySelector('#seccion-categoria');
+
+   cargarLibrosEnBaseACategoria(linksCategorias[1], section);
+
+   const cantidadDePackDeTarjetasFaltantes = 4;
+   
+   for(let i = 0; i < cantidadDePackDeTarjetasFaltantes ; i++){// arranca en 1 para saltearse la seccion de TODAS
+   
+      let sectionCopia = section.cloneNode(true);
+      sectionCopia.classList.add('clon');
+
+      switch(i){
+
+         case 0:
+            cargarLibrosEnBaseACategoria(linksCategorias[2], sectionCopia);
+            break;
+
+         case 1:
+            cargarLibrosEnBaseACategoria(linksCategorias[3], sectionCopia);
+            break;
+
+         case 2:
+            cargarLibrosEnBaseACategoria(linksCategorias[4], sectionCopia);
+            break;
+
+         case 3:
+            cargarLibrosEnBaseACategoria(linksCategorias[5], sectionCopia);
+            break;
+
+            default:
+               break;
+
+      }
+
+      main.appendChild(sectionCopia);
+   
+   }
+}
+
+function borrarClones(){
+
+   const main = document.querySelector('main');
+
+   let cantidadDeClones = document.querySelectorAll('.clon').length;
+
+   for (let i = 0 ; i < cantidadDeClones ; i++){
+
+      main.removeChild(document.querySelector('.clon'));
+
+   }
+
+}
+
+
+
+
+
