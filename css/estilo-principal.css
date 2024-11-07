@@ -198,6 +198,14 @@ body{
    
 }
 
+/*******estilo estrellas js*********/
+
+.inline{
+   display: inline;
+}
+
+/**********************/ 
+
 .articulo-categoria {
   
    max-width: 300px;
