@@ -185,8 +185,3 @@ function borrarClones(){
    }
 
 }
-
-
-
-
-
