@@ -316,6 +316,9 @@ body{
    transition: all .3s;
 }
 
+
+
+
 #footer-principal .footer-principal-div {
    display: flex;
    align-items: center;
@@ -323,11 +326,16 @@ body{
    padding: .7em;
 }
 
+
 #footer-principal #footer-izquierdo #copyright{
    color: var(--light-color-acento-2);
 }
 
-#footer-principal #footer-central div {
+
+
+
+
+#footer-principal #footer-derecho div {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -340,14 +348,14 @@ body{
    transition: scale .5s;
 }
 
-#footer-principal #footer-central div a{
+#footer-principal #footer-derecho div a{
    color: rgba(255, 255, 255, 0.817);
    margin: 1em;
    transition: scale .3s, margin .3s;
 }
 
 
-#footer-principal #footer-central div i{
+#footer-principal #footer-derecho div i{
    font-size: 4em;
 
 }
@@ -356,7 +364,7 @@ body{
 /* PSEUDOCLASES */
 
 /* Hover*/
-#footer-principal #footer-central div a:hover{
+#footer-principal #footer-derecho div a:hover{
    color: var(--light-color-acento-2);
    scale: 1.5;
 
@@ -367,11 +375,12 @@ body{
    font-size: 1.5em;
 }
 
+
 #footer-principal .footer-principal-div:hover {
    flex-grow: .7;
 }
 
-#footer-principal #footer-central:hover > div a {
+#footer-principal #footer-derecho:hover > div a {
    margin: 3em;
 }
 #footer-principal .footer-principal-div:hover > div > img {
