@@ -70,6 +70,8 @@ function cargarLibrosEnBaseACategoria(linkCategoria, elementoHtml){
       };
 
       });
+
+      ponerArticulosConEventos();
 }
 
 
@@ -230,13 +232,32 @@ inputBuscador.addEventListener('keyup', () => { // evento de cuando levanta tecl
   arrayDeLibrosQueAplican.forEach((item) =>{ // itero los article que contenian los titulos que pasaron filtros
 
    section.appendChild(item); // agrego al section original los articles.
-
+   ponerArticulosConEventos();
   });
 
 });
+
+function ponerArticulosConEventos(){
+   const articulosConEventos = document.querySelectorAll('.articulo-categoria');
+
+
+   articulosConEventos.forEach(articulo => {
    
-
-
-
-
+       articulo.addEventListener('mouseenter', () => { // mouse encima del item
+           articulo.classList.add("articulo-categoria-mouseenter");
+           });
+   
+       articulo.addEventListener('mouseleave', () => { // mouse cuando se va de encima del item
+           articulo.classList.remove("articulo-categoria-mouseenter");
+           });
+   
+       articulo.addEventListener('mousedown', () => { // mouse cuando mantengo presionado el item
+           articulo.classList.add("articulo-categoria-mousedown");
+           });
+   
+       articulo.addEventListener('mouseup', () => { // mouse cuando dejo de presionar el item
+           articulo.classList.remove("articulo-categoria-mousedown");
+           });
+   });
+}
 
