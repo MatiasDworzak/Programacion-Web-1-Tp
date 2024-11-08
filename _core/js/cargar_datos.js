@@ -11,12 +11,10 @@ linksCategorias.forEach(function(linkCategoria) {
    linkCategoria.addEventListener("click", function() {
       articulos = ""
 
-
+      borrarClones();
 
       if (linkCategoria.innerText == 'TODOS'){
          seccionTodos();
-      } else{
-         borrarClones();
       }
 
       cargarLibrosEnBaseACategoria(linkCategoria, document);
@@ -142,7 +140,9 @@ function seccionTodos(){
    for(let i = 0; i < cantidadDePackDeTarjetasFaltantes ; i++){// arranca en 1 para saltearse la seccion de TODAS
    
       let sectionCopia = section.cloneNode(true);
+      sectionCopia.id = "seccion-categoria-clon" + (i+1);
       sectionCopia.classList.add('clon');
+      sectionCopia.classList.add('seccion-categoria-clase');
 
       switch(i){
 
@@ -185,6 +185,56 @@ function borrarClones(){
    }
 
 }
+
+// BUSCADOR
+
+let inputBuscador = document.getElementById('search');
+
+inputBuscador.addEventListener('click', () => {
+
+   tabCategoria0.click(); // que se vaya a la categoria TODOS cuando cliquea en el buscador.  
+
+});
+
+
+
+const itemsConNombres = document.querySelectorAll('.item-valor-nombre'); // para este momento ya se crearon las 50 tarjetas
+// console.log(itemsConNombres);
+
+inputBuscador.addEventListener('keyup', () => { // evento de cuando levanta tecla
+
+   let arrayDeLibrosQueAplican = new Array(); // creo un array que guardara los ARTICULOS (tarjetas) que contienen los titulos que poseen el texto que ingreso el usuario
+
+   itemsConNombres.forEach((item) => { // itero en el array de nombres que saque del index (linea 201)
+    
+      
+
+      // if (!item.innerHTML.toUpperCase().includes(inputBuscador.value.toUpperCase())){ // si lo que ingresa el usuario no lo posee el nombre del item, hacemos el item invisible
+      //    item.parentNode.parentNode.classList.add('invisible');
+      // } else { // si lo posee, le sacamos el invisible y se puede visualizar.
+      //    item.parentNode.parentNode.classList.remove('invisible');
+      //    arrayDeLibrosQueAplican.push(item);
+      // }
+
+      if (item.innerHTML.toUpperCase().includes(inputBuscador.value.toUpperCase())){ // si el titulo del item contiene lo que ingreso el usuario pasa
+         arrayDeLibrosQueAplican.push(item.parentNode.parentNode); // agrego el article que contiene el titulo que paso el filtro
+      }
+   });
+
+  borrarClones(); // borro los sections creados en el metodo seccionTodos();
+
+  let section = document.querySelector('#seccion-categoria');  // agarro el section principal
+
+  section.innerHTML=''; // vacio el section principal
+
+  arrayDeLibrosQueAplican.forEach((item) =>{ // itero los article que contenian los titulos que pasaron filtros
+
+   section.appendChild(item); // agrego al section original los articles.
+
+  });
+
+});
+   
 
 
 
