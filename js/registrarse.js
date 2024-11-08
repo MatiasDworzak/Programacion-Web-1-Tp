@@ -25,6 +25,7 @@ function validar(){
     let tieneMinuscula = /[a-z]/;
     let tieneMayuscula = /[A-Z]/;
     let longitudMinima = 8;
+    let longitudMaxima = 12;
     let caracteresEspeciales = /[:#?!%$]/;    
     console.log(mail);
     console.log(contrasenia);
@@ -44,6 +45,10 @@ function validar(){
 
     if(contrasenia.length<longitudMinima){
         mensajeError += "<p>La contrasenia tiene que tener 8 caracteres como minimo.</p>"
+        error = true;
+    }
+    if(contrasenia.length>longitudMaxima){
+        mensajeError += "<p>La contrasenia tiene que tener 12 caracteres como maximo.</p>"
         error = true;
     }
 
@@ -79,7 +84,5 @@ function validar(){
         }, 2000); // 2000 milisegundos = 2 segundos
 
         form.submit(); // Enviar el formulario, esto hará el refresco
-    }  }
-
-
-
+    }  
+}

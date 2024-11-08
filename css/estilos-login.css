@@ -5,7 +5,6 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Nunito';
-
 }
 
 body a{
@@ -59,6 +58,11 @@ body a{
 /*EMAIL Y CONTRASEÑA*/
 .formulario-container-input input{
     margin-bottom: 10px;
+}
+
+.formulario-container-input label{
+    color: rgb(228, 49, 49);
+    padding-bottom: 5px;
 }
 
 
@@ -115,8 +119,17 @@ body a{
 .formulario-container-input-2 input:hover{
     background: var(--light-color-acento-2);
 }
-*/
+
+
 /*.formulario-container-input-2 input:active{
     background: var(--light-color-acento-1);
-}*/
+}
+*/
 
+
+
+/* CLASES PARA EL JS*/
+.submit-desactivado{
+    background-color: rgb(170, 155, 155);
+    color: rgb(100, 100, 100);
+}
